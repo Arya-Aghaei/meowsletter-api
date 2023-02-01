@@ -6,10 +6,13 @@ export const newsletterSchema = checkSchema({
     errorMessage: "Invalid email",
   },
   language: {
+    default: {
+      options: "en-gb",
+    },
     isIn: {
       options: [["en-gb", "en-us", "de", "fa"]],
       errorMessage:
-        "Time must be en-gb (British English), en-us (American English), de (German) or fa (Persian)",
+        "Language must be en-gb (British English), en-us (American English), de (German) or fa (Persian)",
     },
   },
   time: {

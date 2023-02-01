@@ -7,7 +7,7 @@
     "start": "npm run build && node build/server.js",
     "dev": "nodemon source/server.ts",
     "build": "rm -rf build/ && prettier --write source/ && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage --watchAll"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "nodemon": "^2.0.20",
     "prettier": "^2.8.3",
     "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
   },
   "dependencies": {
