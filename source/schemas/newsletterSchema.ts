@@ -3,7 +3,7 @@ import { checkSchema } from "express-validator";
 export const newsletterSchema = checkSchema({
   email: {
     isEmail: true,
-    errorMessage: "Invalid email",
+    errorMessage: "Please enter a valid email address",
   },
   language: {
     default: {

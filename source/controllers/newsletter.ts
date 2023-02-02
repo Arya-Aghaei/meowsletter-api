@@ -8,7 +8,12 @@ const addNewsletter = async (req: Request, res: Response) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({
       message: "Please fill in all fields correctly!",
-      errors: errors.array(),
+      errors: errors.array().map((er) => {
+        return {
+          field: er.param,
+          message: er.msg,
+        };
+      }),
       status: "NOT_VALID",
       invalidFields: Object.keys(errors.mapped()),
     });
