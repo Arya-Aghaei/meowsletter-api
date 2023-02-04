@@ -7,7 +7,7 @@
     "start": "npm run build && node build/server.js",
     "dev": "nodemon source/server.ts",
     "build": "rm -rf build/ && prettier --write source/ && tsc",
-    "test": "jest --coverage --watchAll"
+    "test": "jest --watchAll --forceExit"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +27,6 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@types/axios": "^0.14.0",
     "@types/morgan": "^1.9.4",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
